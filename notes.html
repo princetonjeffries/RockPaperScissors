@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/notes.css'>
+    <meta name="description" content="Fun Rock paper Scissors">
+    <meta name="keywords" content="Rock, Paper, Scissors">
+    <meta name="author" content="Princeton Jeffries">
+    <title>Rock Paper Scissors Online</title>
+    <link rel='icon' href='images/logo.png' type='image/png'>
+</head>
+<body>
+    <h1 id="gameType">Rock Paper Scissors</h1>
+    <h2 id='title'></h1>
+    <div id='gameOver'>
+        <div id = 'container'>
+            <h2 id="mylink">Choose your rounds!</h2>
+            <select name="choice" id="choice" onchange="startGame()">
+                <option value=""></option>
+                <option value="3">Best of 3</option>
+                <option value="5">Best of 5</option>
+                <option value="7">Best of 7</option>
+            </select>
+        </div>
+        <h3 id=compScore></h3>
+        <h3 id=playerScore></h3>
+        <h3 id=tie></h3>
+        <div id='images'>
+            <a href="#" style="text-decoration:none;"><img onclick='rock(); scoreKeep();' id=rock value='rock' height=128 width=auto>
+            <img onclick='paper(); scoreKeep();' id=paper value='paper' height=128 width=auto>
+            <img onclick='scissors(); scoreKeep();' id=scissors value='scissors' height=128 width=auto></a>
+        </div>
+    </div>
+    <button id='restartButton' onClick="window.location.reload();" style='display:none;'>Restart</button>
+<!-- The actual snackbar -->
+    <div id="snackbar">Its a tie, choose again.</div>
+    <script src="javascript/notes.js"></script>
+</body>
+</html>
