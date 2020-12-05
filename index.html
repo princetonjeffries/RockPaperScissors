@@ -11,7 +11,7 @@
     <link rel='icon' href='images/logo.png' type='image/png'>
 </head>
 <body>
-    <h1 id="gameType">Rock Paper Scissors</h1>
+    <h1 id="gameType" >Rock Paper Scissors</h1>
     <h2 id='title'></h1>
     <div id='gameOver'>
         <div id = 'container'>
@@ -27,9 +27,10 @@
         <h3 id=playerScore></h3>
         <h3 id=tie></h3>
         <div id='images'>
-            <a href="#" style="text-decoration:none;"><img onclick='rock(); scoreKeep();' id=rock value='rock' height=128 width=auto>
-            <img onclick='paper(); scoreKeep();' id=paper value='paper' height=128 width=auto>
-            <img onclick='scissors(); scoreKeep();' id=scissors value='scissors' height=128 width=auto></a>
+            <a href="#" style="text-decoration:none;">
+            <img class="choices" onclick='rock(); scoreKeep();' id="rock" value='rock' height=128 width=auto>
+            <img class="choices" onclick='paper(); scoreKeep();' id="paper" value='paper' height=128 width=auto>
+            <img class="choices" onclick='scissors(); scoreKeep();' id="scissors" value='scissors' height=128 width=auto></a>
         </div>
     </div>
     <button id='restartButton' onClick="window.location.reload();" style='display:none;'>Restart</button>

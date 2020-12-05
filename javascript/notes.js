@@ -22,14 +22,18 @@ function rock(){
     if(computer == 'scissors'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
-        document.getElementById(rock).classList.add('green-glow');
-        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
+        document.getElementById('rock').classList.add('green-glow');
+        setTimeout(function() {document.getElementById('rock').classList.remove('green-glow')},300);
         
     }else if(computer =='paper'){
         computerScore++;
         document.getElementById('compScore').innerHTML = ('Computer: ' + computerScore);
+        document.getElementById('rock').classList.add('red-glow');
+        setTimeout(function() {document.getElementById('rock').classList.remove('red-glow')},300);
     }else if(computer =='rock'){
         snackbar();
+        document.getElementById('rock').classList.add('gray-glow');
+        setTimeout(function() {document.getElementById('rock').classList.remove('gray-glow')},300);
     }
     console.log(playerScore);
     console.log(computerScore);
@@ -41,14 +45,18 @@ function paper(){
     if(computer == 'rock'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
-        document.getElementById(rock).classList.add('green-glow');
-        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
+        document.getElementById('paper').classList.add('green-glow');
+        setTimeout(function() {document.getElementById('paper').classList.remove('green-glow')},300);
         
     }else if(computer =='scissors'){
         computerScore++;
         document.getElementById('compScore').innerHTML = ('Computer: ' + computerScore);
+        document.getElementById('paper').classList.add('red-glow');
+        setTimeout(function() {document.getElementById('paper').classList.remove('red-glow')},300);
     }else if(computer =='paper'){
         snackbar();
+        document.getElementById('paper').classList.add('gray-glow');
+        setTimeout(function() {document.getElementById('paper').classList.remove('gray-glow')},300);
     }
     console.log(playerScore);
     console.log(computerScore);
@@ -59,14 +67,18 @@ function scissors(){
     if(computer == 'paper'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
-        document.getElementById(rock).classList.add('green-glow');
-        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
+        document.getElementById('scissors').classList.add('green-glow');
+        setTimeout(function() {document.getElementById('scissors').classList.remove('green-glow')},300);
         
     }else if(computer =='rock'){
         computerScore++;
         document.getElementById('compScore').innerHTML = ('Computer: ' + computerScore);
+        document.getElementById('scissors').classList.add('red-glow');
+        setTimeout(function() {document.getElementById('scissors').classList.remove('red-glow')},300);
     }else if(computer =='scissors'){
         snackbar();
+        document.getElementById('scissors').classList.add('gray-glow');
+        setTimeout(function() {document.getElementById('scissors').classList.remove('gray-glow')},300);
     }
     console.log(playerScore);
     console.log(computerScore);
@@ -94,6 +106,8 @@ function scoreKeep(){
             document.getElementById('restartButton').style.display = 'inline';
             
         } else if(playerScore == 2){
+            document.getElementById('gameOverImg').classList.add('show');
+            document.getElementById('gameOverImg').src = 'images/win.png';
             document.getElementById('gameOver').innerHTML = 'GAME OVER! YOU WIN!';
             document.getElementById('restartButton').style.display = 'inline';
         }

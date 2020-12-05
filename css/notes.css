@@ -1,6 +1,16 @@
 .green-glow{
     border:5px green solid;
 }
+.red-glow{
+  border:5px red solid;
+}
+.gray-glow{
+  border:5px rgb(71, 71, 71) solid;
+}
+.choices{
+  padding:0;
+  border-radius:50%;
+}
 body{
     text-align:center;
     background:rgb(182, 124, 182);
