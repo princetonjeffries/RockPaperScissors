@@ -22,6 +22,8 @@ function rock(){
     if(computer == 'scissors'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
+        document.getElementById(rock).classList.add('green-glow');
+        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
         
     }else if(computer =='paper'){
         computerScore++;
@@ -31,6 +33,7 @@ function rock(){
     }
     console.log(playerScore);
     console.log(computerScore);
+
 }
 //When player chooses paper
 function paper(){
@@ -38,6 +41,8 @@ function paper(){
     if(computer == 'rock'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
+        document.getElementById(rock).classList.add('green-glow');
+        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
         
     }else if(computer =='scissors'){
         computerScore++;
@@ -54,6 +59,8 @@ function scissors(){
     if(computer == 'paper'){
         playerScore++;
         document.getElementById('playerScore').innerHTML = ('You: ' + playerScore);
+        document.getElementById(rock).classList.add('green-glow');
+        setTimeout(function() {document.getElementById(rock).classList.remove('green-glow')})
         
     }else if(computer =='rock'){
         computerScore++;

@@ -1,3 +1,6 @@
+.green-glow{
+    border:5px green solid;
+}
 body{
     text-align:center;
     background:rgb(182, 124, 182);
